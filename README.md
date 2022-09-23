@@ -13,7 +13,7 @@ composer require transloapi/php-translo
 ```php
 use Translo\Translo;
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 $apiKey = 'YOUR-RAPIDAPI-KEY';
 $translo = new Translo($apiKey);
@@ -44,7 +44,7 @@ array(3) {
 ```php
 use Translo\Translo;
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 $apiKey = 'YOUR-RAPIDAPI-KEY';
 $translo = new Translo($apiKey);
@@ -114,7 +114,7 @@ Ma-ia huu"
 ```php
 use Translo\Translo;
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 $apiKey = 'YOUR-RAPIDAPI-KEY';
 $translo = new Translo($apiKey);
