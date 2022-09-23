@@ -1,0 +1,19 @@
+{
+    "name": "timga/php-translo",
+    "description": "PHP library for Translo API",
+    "type": "library",
+    "authors": [
+        {
+            "name": "TimGa",
+            "email": "tgavryutenko@mail.ru"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Translo\\": "src/"
+        }
+    }
+}
