@@ -11,11 +11,9 @@ composer require transloapi/php-translo
 ## Translate
 
 ```php
-<?php
-
 use Translo\Translo;
 
-include '../vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $apiKey = 'YOUR-RAPIDAPI-KEY';
 $translo = new Translo($apiKey);
@@ -44,11 +42,9 @@ array(3) {
 ## Batch translate
 
 ```php
-<?php
-
 use Translo\Translo;
 
-include '../vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $apiKey = 'YOUR-RAPIDAPI-KEY';
 $translo = new Translo($apiKey);
@@ -116,11 +112,9 @@ Ma-ia huu"
 ## Detect
 
 ```php
-<?php
-
 use Translo\Translo;
 
-include '../vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $apiKey = 'YOUR-RAPIDAPI-KEY';
 $translo = new Translo($apiKey);
