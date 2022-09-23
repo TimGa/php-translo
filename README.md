@@ -5,7 +5,7 @@ PHP Client for Translo API
 ## Installing
 
 ```
-composer require transloapi/php-translo
+composer require timga/php-translo
 ```
 
 ## Translate
