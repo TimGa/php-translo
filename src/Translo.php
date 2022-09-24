@@ -22,21 +22,41 @@ class Translo
     }
 
     /**
+     * @param string | array $text
      * @throws GuzzleException
      */
-    public function translate(string $text, string $fromLang, string $toLang): array
+    public function translate($text, string $fromLang, string $toLang): array
     {
+        $multipart = [
+            [
+                "name" => "from",
+                "contents" => $fromLang
+            ],
+            [
+                "name" => "to",
+                "contents" => $toLang
+            ],
+        ];
+        if (is_array($text)) {
+            foreach ($text as $content) {
+                $multipart[] = [
+                    "name" => "text",
+                    "contents" => $content
+                ];
+            }
+        } else {
+            $multipart[] = [
+                "name" => "text",
+                "contents" => $text
+            ];
+        }
+
         $response = $this->client->request('POST', 'translate', [
             'headers' => [
-                'content-type' => 'application/x-www-form-urlencoded',
                 'X-RapidAPI-Key' => $this->apiKey,
                 'X-RapidAPI-Host' => self::HOST
             ],
-            'form_params' => [
-                'from' => $fromLang,
-                'to' => $toLang,
-                'text' => $text
-            ]
+            'multipart' => $multipart
         ]);
         return $this->responseToArray($response);
     }
